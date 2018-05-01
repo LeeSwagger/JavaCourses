@@ -11,7 +11,9 @@ class Lesson2 {
      * хвост отбрасываем без откругления
      */
     static int formula(int x) {
-        return 0;
+        int constant = 13;
+
+        return (int)Math.sqrt((double)(constant * x + constant / x));
     }
 
     /**
@@ -27,7 +29,23 @@ class Lesson2 {
      * @return возвращаем инициалы в верхнем регистре разделенные точкой, как в примере выше
      */
     static String initials(String fullName) {
-        return null;
+        String[] nameParts = fullName.split(" ");
+        StringBuilder initials = new StringBuilder();
+
+        for (String namePart: nameParts) {
+            boolean isValidInitial = namePart.length() == 2 && namePart.indexOf('.') == 1;
+
+            if (isValidInitial) {
+                initials.append(namePart);
+                continue;
+            }
+
+            initials
+                .append(Character.toString(namePart.charAt(0)).toUpperCase())
+                .append('.');
+        }
+
+        return initials.toString();
     }
 
 }
