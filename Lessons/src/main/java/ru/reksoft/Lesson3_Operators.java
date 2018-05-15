@@ -18,9 +18,21 @@ public class Lesson3_Operators {
      * - получить первые n символов из строки можно методом .substring(0, n)
      */
     public static String task1(int i, String str) {
-        // свой код нужно писать тут
-        // следующую строку можно удалять
-        return null;
+        String result;
+
+        if (i > 0) {
+            result = str + i;
+        } else if (i < 0) {
+            result = i + str;
+        } else {
+            result = "0";
+        }
+
+        if (result.length() > 10) {
+            result = result.substring(0, 10);
+        }
+
+        return result;
     }
 
     /**
@@ -37,9 +49,15 @@ public class Lesson3_Operators {
      * Подсказка: тут все просто, думайте сами ;)
      */
     public static boolean task2(int i) {
-        // свой код нужно писать тут
-        // следующую строку можно удалять
-        return false;
+        int result = --i;
+
+        if (result > 100 || result < 30) {
+            result += 1000;
+        } else if (result % 2 == 0) {
+            result -= 1000;
+        }
+
+        return result >= 0;
     }
 
 
