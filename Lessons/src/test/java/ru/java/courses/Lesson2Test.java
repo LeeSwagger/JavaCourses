@@ -1,8 +1,9 @@
-package ru.reksoft;
+package ru.java.courses;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Если тут все красное и IEDA ругается:
