@@ -26,9 +26,9 @@ public class Team {
     }
 
     private boolean canAddPlayer() {
-        final int PLAYERS_COUNT_LIMIT = 20;
+        final int playersCountLimit = 20;
 
-        return this.players.size() + 1 <= PLAYERS_COUNT_LIMIT;
+        return this.players.size() + 1 <= playersCountLimit;
     }
 
     public void removePlayer(int index) {
@@ -64,7 +64,7 @@ public class Team {
     }
 
     private void checkName(String name) {
-        if (name != null && name.trim().equals("")) {
+        if (name == null || name.trim().equals("")) {
             throw new RuntimeException("Нельзя задать пустое имя!");
         }
     }

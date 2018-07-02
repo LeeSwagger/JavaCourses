@@ -20,7 +20,7 @@ public class Person {
     }
 
     private void checkName(String name) {
-        if (name != null && name.trim().equals("")) {
+        if (name == null || name.trim().equals("")) {
             throw new RuntimeException("Нельзя задать пустое имя!");
         }
     }

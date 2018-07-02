@@ -17,15 +17,15 @@ public class Lesson4_FlowControl {
      * @return самую длинную строку из полученного массива
      */
     public static String task1(String[] strings) {
-        String shortest = "";
+        String longest = "";
 
         for (String str : strings) {
-            if (str.length() > shortest.length()) {
-                shortest = str;
+            if (str.length() > longest.length()) {
+                longest = str;
             }
         }
 
-        return shortest;
+        return longest;
     }
 
     /**
